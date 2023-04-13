@@ -1,1 +1,1 @@
-# Job-Application-Automation
+# Job Application Automation
