@@ -24,10 +24,11 @@ def education_experience(driver:WebDriver) -> bool:
         driver.find_element(By.XPATH, "//input[@data-automation-id='searchBox']").send_keys(Keys.ENTER)
         time.sleep(2)
         checkbox_panel = driver.find_elements(By.XPATH, "//input[@data-automation-id='checkboxPanel']")
-        if skill in ['Seaborn', 'PDFMiner', 'Gensim - Word2Vec', 'Probability and Statistics']:
-            checkbox_panel[-1].click()
-        else:
-            checkbox_panel[0].click()
+        if checkbox_panel:
+            if skill in ['Seaborn', 'PDFMiner', 'Gensim - Word2Vec', 'Probability and Statistics']:
+                checkbox_panel[-1].click()
+            else:
+                checkbox_panel[0].click()
         time.sleep(2)
 
     print('Completed skills population...')
